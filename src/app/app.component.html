@@ -1,0 +1,67 @@
+<h1  [ngClass]="{uno:varVisible==0, dos:varVisible==1}">Formulario de usuario</h1>
+
+<form  [ngClass]="{uno:varVisible==0, dos:varVisible==1}">
+
+  Nombre:
+  <input ng-model="user.last" ng-minlength="3" ng-maxlength="10" type="text" id="nombre" name="nombre" (keyup)="actualizar($event);"><br><br>
+  Profesion:
+  <input type="text" id="profesion" name="profesion" (keyup)="actualizar($event);"><br><br>
+  Telefono:
+  <input type="text" id="telefono" name="telefono" (keyup)="actualizar($event);"><br><br>
+  Correo Electronico:
+  <input type="text" id="correo" name="correo" (keyup)="actualizar($event);"><br><br>
+  Direccion:
+  <input type="text" id="direccion" name="direccion" (keyup)="actualizar($event);"><br><br>
+  Twitter:
+  <input type="text" id="twitter" name="twitter" (keyup)="actualizar($event);"><br><br>
+  Envato:
+  <input type="text" id="envato" name="envato" (keyup)="actualizar($event);"><br><br>
+</form><br>
+<button type="button" name="button" id="boton" (click) = "visibilidad();" MiEvento>Ocultar Formulario</button>
+
+
+<aside class="profile-card">
+
+  <header>
+
+    <!-- here’s the avatar -->
+    <a>
+      <img src="https://s3.amazonaws.com/uifaces/faces/twitter/oykun/128.jpg">
+    </a>
+
+    <!-- the username -->
+    <h1>{{nombre}}</h1>
+
+    <!-- and role or location -->
+    <h2>{{profesion}}</h2>
+
+  </header>
+
+  <!-- bit of a bio; who are you? -->
+  <div class="profile-bio">
+    <p>{{telefono}}</p>
+    <p>{{correo}}</p>
+    <p>{{direccion}}</p>
+
+  </div>
+  <ul class="profile-social-links">
+
+    <!-- twitter - el clásico  -->
+    <li>
+      <a href="{{twitter}}">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-twitter.svg">
+      </a>
+    </li>
+
+    <!-- envato – use this one to link to your marketplace profile -->
+    <li>
+      <a href="{{envato}}">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-envato.svg">
+      </a>
+    </li>
+
+    <!-- add or remove social profiles as you see fit -->
+
+  </ul>
+
+</aside>
